@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.navbar-container {
+  background-color: cadetblue;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+}
+
+.dummy-content {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.content-container {
+  padding-top: 65px;
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tabs {
+    justify-content: center !important;
+    margin-right: 0 !important;
+  }
+  .logo {
+    justify-content: center;
+  }
+  .mobile-navbar {
+    display: none !important;
+  }
+  .content-container {
+    padding-top: 127px;
+  }
+}
+@media (min-width: 491px) and (max-width: 640px) {
+  .tabs-name p {
+    display: none !important;
+  }
+  .mobile-navbar {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 491px) {
+  .mobile-navbar {
+    position: fixed;
+    background-color: cadetblue;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .tabs {
+    display: none !important;
+  }
+
+  .mobile-navbar .tabs-name {
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 20px 6px 20px;
+    border-radius: 10px;
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+
+  .mobile-navbar .tabs-name:hover {
+    background-color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: end;
+  width: 50%;
+  margin-right: 20px;
+}
+
+.tabs-name {
+  font-size: 20px;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 20px 6px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+.tabs-name p {
+  display: flex;
+}
+
+.tabs-name:hover {
+  background-color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  white-space: nowrap;
+}
+
+.mobile-navbar .tabs-name {
+  display: none;
+}
